@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Watch a movie, with JS" />
+  <meta name="description" content="Simplified long division, with JS" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Trisha Ray" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <title>Watch a movie, with JS</title>
+  <title>Simplified long division, with JS</title>
 </head>
 
 
@@ -25,21 +25,31 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Watch a movie, with JS</span>
+        <span class="mdl-layout-title">Simplified long division, with JS</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/movie_ratings.jpg" alt="movie ratings" />
+        <img src="./images/division.png" alt="division" />
       </div>
-      <div class="page-content">Enter your age</div>
+      <div class="page-content">Enter your Numbers</div>
       <br />
       <form>
         <br />
         <!-- Numeric Textfield -->
+        <p> Enter the dividend </p>
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="movieforage" />
-          <label class="mdl-textfield__label" for="movieforage">enter age...</label>
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="dividend" />
+          <label class="mdl-textfield__label" for="dividend">enter age...</label>
+          <!-- class "mdl-textfield__error" -->
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+        <br />
+        <!-- Numeric Textfield -->
+        <p> Enter the divisor </p>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="divisor" />
+          <label class="mdl-textfield__label" for="divisor">enter age...</label>
           <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
@@ -47,7 +57,7 @@
         <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="calculate()" type="button">
-          Find Movie Type
+          Calculate!
         </button>
       </form>
       <br />
